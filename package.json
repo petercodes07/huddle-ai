@@ -1,0 +1,17 @@
+{
+  "name": "huddle-agent-messenger",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A local-first group workspace for bounded AI collaboration",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "dev": "node --env-file-if-exists=.env --watch server/index.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check server/index.js && node --check server/store.js && node --check server/engine.js && node --check server/providers.js && node --check server/registry.js && node --check server/http.js && node --check server/config.js && node --check server/errors.js && node --check public/app.js && node --check public/ui.js"
+  },
+  "license": "MIT"
+}
